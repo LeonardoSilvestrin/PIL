@@ -1,7 +1,6 @@
-import PIL
 from PIL import Image
 
-img= PIL.Image.open("StenographicImg\\outputs\\esteno.png")
+img= Image.open("StenographicImg\\outputs\\esteno.png")
 pix2=list(img.getdata())
 msg_bin_out = []
 

@@ -1,9 +1,7 @@
-import PIL
 from PIL import Image
 
-
-img1 = PIL.Image.open("StenographicImg\\fonte.png")
-img2 = PIL.Image.open("StenographicImg\\outputs\\esteno.png")
+img1 = Image.open("StenographicImg\\fonte.png")
+img2 = Image.open("StenographicImg\\outputs\\esteno.png")
 
 pix1 = list(img1.getdata())
 pix2 = list(img2.getdata())
@@ -16,6 +14,6 @@ for i,n in enumerate(pix1):
     tuplatemp = tuple(listatemp)
     pix3.append(tuplatemp)
 
-novafoto=PIL.Image.new('RGBA', img1.size)
+novafoto=Image.new('RGBA', img1.size)
 novafoto.putdata(pix3)
 novafoto.save("StenographicImg\\outputs\\compara.png")

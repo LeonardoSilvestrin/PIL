@@ -12,11 +12,13 @@ def trocacor(imagem, cor_sai,cor_entra):
     img_nova = Image.new('RGBA',imagem.size)
     img_nova.putdata(img_nova_data)
     return img_nova
+
 if __name__ == '__main__':
     im = Image.open("Girabandeira\\Capturar.PNG")
     print("As 10 cores mais presentes na imagem são: \n" + str(sp.corespresentes(im)))
-    im2 = trocacor(im,(0,156,59,255),(255,0,0,255))
-  #  im2 = trocacor(im2,(0,39,118,255),(255,255,0,255))
-  #  im2 = trocacor(im2,(255,223,0,255),(0,0,255,255))
+    im2 = trocacor(im,sp.corespresentes(im)[2],(255,0,0,255))
+    #im2 = trocacor(im2,sp.corespresentes(im)[3],(255,0,0,255))
+    #im2 = trocacor(im2,sp.corespresentes(im)[6],(255,0,0,255))
+    #im2 = trocacor(im2,sp.corespresentes(im)[9],(255,0,0,255))
     im.show()
     im2.show()

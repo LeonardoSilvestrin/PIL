@@ -13,7 +13,7 @@ def tops(dicio,max): #retorna as top(max) keys de maiores valores de um dicionar
         dicio_aux.pop(maxval(dicio_aux))
         i+=1
     return tops
-def corespresentes(image): #retorna as top 5 cores presentes na imagem 
+def corespresentes(image): #retorna as top 4 cores presentes na imagem 
     imgpix = image.getdata()
     cores = dict()
     for pixel in list(imgpix):
@@ -21,7 +21,7 @@ def corespresentes(image): #retorna as top 5 cores presentes na imagem
             cores[pixel]=0
         else:
             cores[pixel]+=1
-    cores = tops(cores,5)
+    cores = tops(cores,4)
     return cores
 def isolacor(image,cor): #isola uma cor específica da imagem, retorna uma nova imagem somente com os píxeis da cor selecionada
     imgpix = image.getdata()
@@ -35,10 +35,11 @@ def isolacor(image,cor): #isola uma cor específica da imagem, retorna uma nova 
     img2 = Image.new('RGBA',image.size)
     img2.putdata(imgnovapix)
     return img2
+
 if __name__ == '__main__':
     im = Image.open("Girabandeira\\Capturar.PNG")
     #im = Image.open("StenographicImg\\praia.png")
-    im = im.resize((250,175))
+    im = im.resize((int(250*1.2),int(175*1.2)))
     cores = corespresentes(im)
     #print("As cinco cores presentes na imagem em maior quantidade são:\n" + str(cores))
     #cor = input("Entre a cor que deseja isolar da forma R G B A separados por espaços: ")

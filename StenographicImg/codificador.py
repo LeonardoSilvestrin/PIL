@@ -1,15 +1,13 @@
-import PIL
 from PIL import Image
-import io
 
-img= PIL.Image.open("StenographicImg\\fonte.png")
+img= Image.open("StenographicImg\\fonte.png")
 pix=list(img.getdata())
 img2 = img
 pixmsg=pix
 
 with open("StenographicImg\\mensagem.txt", encoding='utf-8') as texto:
     msg = texto.read()
-msg_bin = ''.join(format(ord(i), '08b') for i in msg)
+msg_bin = ''.join(format(ord(i), '08b') for i in msg) #transforma todos os chars da msg em binarios de 8bits
 
 pos_mes=0 #posição da mensagem que estou passando para a foto
 
@@ -25,6 +23,6 @@ for pos_foto in range(0, len(pix)):
     pixmsg[pos_foto] = tuple(listatemp)
     pos_foto+=1
 
-novafoto=PIL.Image.new('RGBA', img.size)
+novafoto=Image.new('RGBA', img.size)
 novafoto.putdata(pixmsg)
 novafoto.save("StenographicImg\\outputs\\esteno.png")

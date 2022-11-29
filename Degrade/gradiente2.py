@@ -18,7 +18,7 @@ for coluna in range(im_matriz1.shape[1]):
     for linha in range(im_matriz1.shape[0]):
         im_nova_matriz[linha][coluna] = a*im_matriz2[linha][coluna]+(1-a)*im_matriz1[linha][coluna]
     #a = coluna/im_matriz1.shape[1]
-    #a = sigmoid(coluna-im_matriz1.shape[1]/2)
-    a = .5
+    a = sigmoid(coluna-im_matriz1.shape[1]/2)
+    #a = .5
 im_nova = Image.fromarray(im_nova_matriz,'RGBA')
 im_nova.show()

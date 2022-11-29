@@ -11,6 +11,7 @@ im_nova.show()
 mascara = fonte[b].point(lambda azul: azul > 90 and 255) #seleciona as regiões onde o azul é maior que 90
 out_red = fonte[r].point(lambda vermelho: vermelho*0+255) #leva o vermelho para 255
 out_blue = fonte[b].point(lambda azul: azul*0) #leva o azul para zero
+
 fonte[r].paste(out_red,None, mascara) #aplica as alterações de vermelho na regiao da máscara
 fonte[b].paste(out_blue,None, mascara) # ''   ''   ''       ''  azul    ''   ''   ''  ''
 

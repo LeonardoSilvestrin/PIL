@@ -16,6 +16,6 @@ def trocacor(imagem, cor_sai,cor_entra):
 if __name__ == '__main__':
     im = Image.open("Girabandeira\\Capturar.PNG")
     print("As 10 cores mais presentes na imagem são: \n" + str(sp.corespresentes(im)))
-    im2 = trocacor(im,sp.corespresentes(im)[1],(255,0,0,255))
+    im2 = trocacor(im,sp.corespresentes(im)[0],(255,0,0,255))
     im.show()
     im2.show()

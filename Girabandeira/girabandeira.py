@@ -25,6 +25,6 @@ if __name__ == '__main__':
     #im = im.resize((500,350))
     x = int(im.size[0]/2)
     y = int(im.size[1]/2)
-    im2 = rodacirculo(im,x,y,220,90)
+    im2 = rodacirculo(im,x,y,400,90)
     im.show()
     im2.show()

@@ -6,10 +6,10 @@ im1.show()
 #apresentar: rotate() resize() convert() 
 
 # filter(): from PIL import ImageFilter
-# ImageFilter.DETAIL, ImageFilter.BLUR, ...
+#ImageFilter.DETAIL, ImageFilter.BLUR, ...
 
 #from PIL import ImageFilter 
-#im1 = Image.open('Simples\\Bandeira.PNG').filter(ImageFilter.DETAIL)
+#im1 = Image.open('Simples\\Bandeira.PNG').filter(ImageFilter.BLUR)
 #im1.show()
 
 #enhance(): from PIL import ImageEnhance

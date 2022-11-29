@@ -9,3 +9,6 @@ im3 = Image.composite(im1,im2,mask)
 im1.show()
 mask.show()
 im3.show()
+
+
+#result = mask * image1 + (1 - mask) * image2

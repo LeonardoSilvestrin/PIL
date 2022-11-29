@@ -1,6 +1,5 @@
 from PIL import Image
 import numpy
-import matplotlib.pyplot as plt
 
 im = Image.open("Degrade\\bandeira.PNG")
 im2 = Image.open("Degrade\\palmeiras.PNG")
